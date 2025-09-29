@@ -7,10 +7,9 @@ return [
     | Third Party Services
     |--------------------------------------------------------------------------
     |
-    | This file is for storing the credentials for third party services such
-    | as Mailgun, Postmark, AWS and more. This file provides the de facto
-    | location for this type of information, allowing packages to have
-    | a conventional file to locate the various service credentials.
+    | Este arquivo é para armazenar as credenciais de serviços de terceiros
+    | como Mailgun, Postmark, AWS e outros. Ele fornece um local padrão
+    | para que os pacotes encontrem suas credenciais.
     |
     */
 
@@ -29,6 +28,12 @@ return [
         'key' => env('AWS_ACCESS_KEY_ID'),
         'secret' => env('AWS_SECRET_ACCESS_KEY'),
         'region' => env('AWS_DEFAULT_REGION', 'us-east-1'),
+    ],
+
+    // Configuração da Facehug AI
+    'facehug' => [
+        'key' => env('FACEHUG_API_KEY'),
+        'url' => env('FACEHUG_API_URL'),
     ],
 
 ];

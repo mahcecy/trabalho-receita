@@ -23,7 +23,6 @@ Route::post('/alimentos', function (Request $request) {
         'quantidade' => $request->quantidade,
         'unidade' => $request->unidade,
     ]);
-
     return response()->json($alimento, 201);
 });
 
@@ -55,6 +54,8 @@ Route::post('/receita', function () {
     $alimentos = Alimento::all()->map(function($item){
         return $item->quantidade . ' ' . $item->unidade . ' de ' . $item->nome;
     })->toArray();
+    echo "Pasei aqui";
+    exit;
 
     $ingredientes = implode(', ', $alimentos);
 
